@@ -39,6 +39,38 @@
             return resultado
         }
         
+        function combate(valor1, valor2)
+        {
+            if (valor1 == valor2)
+            {
+                alert("EMPATE")
+            }
+
+            else if (valor1 == 1 && valor2 == 3)
+            {
+                alert("GANASTE")
+                triunfos = triunfos + 1
+            }
+
+            else if (valor1 == 2 && valor2 == 1)
+            {
+                alert("GANASTE")
+                triunfos = triunfos + 1
+            }
+
+            else if (valor1 == 3 && valor2 == 2)
+            {
+                alert("GANASTE")
+                triunfos = triunfos + 1
+            }
+
+            else
+            {
+                alert("PERDISTE")
+                derrotas = derrotas + 1
+            }
+        }
+
         //DECLARACIÓN DE VARIABLES//
         let elecciónJugador = 0
         let elecciónPC = 0
@@ -53,35 +85,7 @@
             alert("Tu elegiste " + elección(elecciónJugador))
             alert("El PC eligió " + elección(elecciónPC))
 
-            //COMBATE//
-            if (elecciónJugador == elecciónPC)
-            {
-                alert("EMPATE")
-            }
-
-            else if (elecciónJugador == 1 && elecciónPC == 3)
-            {
-                alert("GANASTE")
-                triunfos = triunfos + 1
-            }
-
-            else if (elecciónJugador == 2 && elecciónPC == 1)
-            {
-                alert("GANASTE")
-                triunfos = triunfos + 1
-            }
-
-            else if (elecciónJugador == 3 && elecciónPC == 2)
-            {
-                alert("GANASTE")
-                triunfos = triunfos + 1
-            }
-
-            else
-            {
-                alert("PERDISTE")
-                derrotas = derrotas + 1
-            }
+            combate(elecciónJugador, elecciónPC)
 
         }
 
