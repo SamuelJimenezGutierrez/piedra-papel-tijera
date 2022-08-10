@@ -39,6 +39,12 @@
             return resultado
         }
         
+        function mensajeDeElección(función, valor1, valor2)
+        {
+            alert("Tu elegiste " + función(valor1))
+            alert("El PC eligió " + función(valor2))
+        }
+        
         function combate(valor1, valor2)
         {
             if (valor1 == valor2)
@@ -81,12 +87,8 @@
         {
             elecciónJugador = prompt("Escribe 1 para elegir piedra, 2 para elegir papel o 3 para elegir tijera.")
             elecciónPC = númeroAleatorio(1,3)
-            
-            alert("Tu elegiste " + elección(elecciónJugador))
-            alert("El PC eligió " + elección(elecciónPC))
-
+            mensajeDeElección(elección, elecciónJugador, elecciónPC)
             combate(elecciónJugador, elecciónPC)
-
         }
 
         alert("Número de veces que ganaste: " + triunfos + ". Número de veces que perdiste: " + derrotas + ".")
